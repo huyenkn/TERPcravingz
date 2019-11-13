@@ -1,0 +1,20 @@
+USE BUDT758_DB_0504_06
+
+SELECT COUNT(*)  FROM Customer
+
+SELECT COUNT(*)  FROM Category
+
+SELECT COUNT(*)  FROM Stop
+
+SELECT COUNT(*)  FROM Shuttle
+
+SELECT COUNT(*)  FROM Restaurant
+
+SELECT COUNT(*)  FROM Review
+
+SELECT COUNT(*)  FROM Have
+
+SELECT COUNT(*)  FROM Belong
+
+SELECT COUNT(*)  FROM Write
+
