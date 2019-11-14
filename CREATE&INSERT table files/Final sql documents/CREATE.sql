@@ -32,6 +32,7 @@ CREATE TABLE dbo.Shuttle(
    revId     CHAR(22) NOT NULL,
    revRating INTEGER,
    revText   VARCHAR(170),
+   revDate DATETIME,
    CONSTRAINT pk_Review_revId PRIMARY KEY (revId)
 );
 
