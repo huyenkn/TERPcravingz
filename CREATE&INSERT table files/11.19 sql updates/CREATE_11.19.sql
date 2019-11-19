@@ -23,15 +23,15 @@ CREATE TABLE dbo.Category(
 );
 
 CREATE TABLE dbo.Stop(
-    stopId   CHAR(5) NOT NULL,
-    stopName VARCHAR(50),
+    stopId CHAR(5) NOT NULL,
+    stopName VARCHAR(100),
     stopLat  DECIMAL(16, 13),
     stopLong DECIMAL(16, 13),
     CONSTRAINT pk_Stop_stopId PRIMARY KEY (stopId)
     );
 
 CREATE TABLE dbo.Shuttle(
-    busId CHAR(5) NOT NULL,
+    busId CHAR(6) NOT NULL,
     busNo CHAR(3),
     busName VARCHAR(50),
     busFinalDest VARCHAR(50),
@@ -47,7 +47,7 @@ CREATE TABLE dbo.Shuttle(
 );
 
 CREATE TABLE dbo.Have(
-   busId  CHAR(5)  NOT NULL,
+   busId  CHAR(6)  NOT NULL,
    stopId CHAR(5)  NOT NULL,
    CONSTRAINT pk_Have_busId_stopId PRIMARY KEY(busId, stopId),
    CONSTRAINT fk_Have_busId FOREIGN KEY(busId)
