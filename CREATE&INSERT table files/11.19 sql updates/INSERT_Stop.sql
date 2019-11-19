@@ -1,9 +1,4 @@
-CREATE TABLE Stop(
-   stopId   CHAR(5) NOT NULL PRIMARY KEY
-  ,stopName VARCHAR(50) NOT NULL
-  ,stopLat  NUMERIC(15,13) NOT NULL
-  ,stopLong NUMERIC(16,13) NOT NULL
-);
+
 INSERT INTO Stop(stopId,stopName,stopLat,stopLong) VALUES ('10001','Stamp Student Union - Slip',38.9876098000000,-76.9439438000000);
 INSERT INTO Stop(stopId,stopName,stopLat,stopLong) VALUES ('10002','Stamp Student Union - Slip',38.9874519000000,-76.9440396000000);
 INSERT INTO Stop(stopId,stopName,stopLat,stopLong) VALUES ('10003','Regents Drive Garage',38.9895200000000,-76.9407500000000);
@@ -175,7 +170,6 @@ INSERT INTO Stop(stopId,stopName,stopLat,stopLong) VALUES ('37012','Auburn Ave a
 INSERT INTO Stop(stopId,stopName,stopLat,stopLong) VALUES ('37013','Auburn Ave and Chestnut Ave',38.9714872000000,-76.8937950000000);
 INSERT INTO Stop(stopId,stopName,stopLat,stopLong) VALUES ('37014','Baltimore Ave and Amherst Rd',38.9728518000000,-76.9378620000000);
 INSERT INTO Stop(stopId,stopName,stopLat,stopLong) VALUES ('37019','Baltimore Avenue and Hartwick Road (Inbound)',38.9794399000000,-76.9378300000000);
-INSERT INTO Stop(stopId,stopName,stopLat,stopLong) VALUES ('37019','Baltimore Ave and Hartwick Rd (Inbound)',38.9794663000000,-76.9378300000000);
 INSERT INTO Stop(stopId,stopName,stopLat,stopLong) VALUES ('37023','Baltimore Ave and Sheridan St',38.9657284000000,-76.9388188000000);
 INSERT INTO Stop(stopId,stopName,stopLat,stopLong) VALUES ('37024','Baltimore Ave and Underwood St',38.9686097000000,-76.9385685000000);
 INSERT INTO Stop(stopId,stopName,stopLat,stopLong) VALUES ('37025','Carroll Ave and Anne St',38.9876429000000,-76.9946070000000);

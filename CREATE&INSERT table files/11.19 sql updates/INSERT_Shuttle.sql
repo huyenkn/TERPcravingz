@@ -1,0 +1,26 @@
+
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID104','104','104 College Park Metro','Regents Drive Garage');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID105','105','105 Campus Connector','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID108','108','108 Adelphi','Regents Drive Garage');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID109','109','109 River Road','College Park - UMD Metro Station');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID111','111','111 Silver Spring','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID113','113','113 Hyattsville','Regents Drive Garage');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID114','114','114 University View','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID115','115','115 Orange','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID116','116','116 Purple','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID117','117','117 Blue','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID118','118','118 Gold','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID122','122','122 Green','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID123','123','123 Discovery District','Regents Drive Garage');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID124','124','Shady Grove','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID126','126','126 New Carrolton','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID127','127','127 Mazza GrandMarc','Regents Drive Garage');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID128','128','128 The Enclave','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID131','131','131 MGM/Enclave','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID132','132','132 The Varsity','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID133','133','133 Grocery Shopping Shuttle','Regents Drive Garage');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID140','140','140 UMB Law','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID141','141','141 Gaithersburg Park & Ride','Stamp Student Union - Slip');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID142','142','142 Columbia Park & Ride','Regents Drive Garage');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BID143','143','143 Greenbelt','Regents Drive Garage');
+INSERT INTO Shuttle(busId,busNo,busName,busFinalDest) VALUES ('BIDBSE','BSE','Bowie State - Enclave Express','Bowie State University');
