@@ -1,14 +1,4 @@
 
-DROP TABLE Write;
-DROP TABLE Belong;
-DROP TABLE Restaurant;
-DROP TABLE Have;
-DROP TABLE Review;
-DROP TABLE Shuttle;
-DROP TABLE dbo.Stop;
-DROP TABLE Category;
-DROP TABLE Customer;
-
 
 CREATE TABLE dbo.Customer(
    cusId CHAR(22) NOT NULL,
@@ -133,7 +123,3 @@ CREATE TABLE dbo.Write(
             ON UPDATE CASCADE
 );
 
-
-
-DELETE FROM table_name WHERE condition;
-DELETE FROM Customer
