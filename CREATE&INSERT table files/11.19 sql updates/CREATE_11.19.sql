@@ -120,6 +120,6 @@ CREATE TABLE dbo.Write(
     CONSTRAINT fk_Write_revId FOREIGN KEY(revId)
 		REFERENCES Review(revId)
 		    ON DELETE CASCADE 
-            ON UPDATE CASCADE
+            ON UPDATE NO ACTION
 );
 
