@@ -99,7 +99,7 @@ CREATE TABLE dbo.Belong(
             ON UPDATE CASCADE,
     CONSTRAINT fk_Belong_categoryId FOREIGN KEY(categoryId)
 		REFERENCES Category(categoryId)
-		    ON DELETE NO ACTION
+		    ON DELETE CASCADE
             ON UPDATE CASCADE      
 );
 
