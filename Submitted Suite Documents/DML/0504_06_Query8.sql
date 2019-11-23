@@ -1,4 +1,4 @@
---4.Which restaurants in College Park AND Hyattsville has affordable price(1-2)?
+--8.Which restaurants in College Park AND Hyattsville has affordable price(1-2)?
 SELECT resName
 FROM Restaurant 
 WHERE resCity IN('Hyattsville','College Park')
