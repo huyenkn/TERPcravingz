@@ -99,7 +99,7 @@ CREATE TABLE dbo.Belong(
             ON UPDATE CASCADE,
     CONSTRAINT fk_Belong_categoryId FOREIGN KEY(categoryId)
 		REFERENCES Category(categoryId)
-		    ON DELETE NO ACTION
+		    ON DELETE CASCADE
             ON UPDATE CASCADE      
 );
 
@@ -120,6 +120,6 @@ CREATE TABLE dbo.Write(
     CONSTRAINT fk_Write_revId FOREIGN KEY(revId)
 		REFERENCES Review(revId)
 		    ON DELETE CASCADE 
-            ON UPDATE CASCADE
+            ON UPDATE NO ACTION
 );
 
