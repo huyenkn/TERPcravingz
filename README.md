@@ -23,3 +23,7 @@ shuttle service.
 Knowing the background of five database students studying Business Analytics at
 University of Maryland, TERPcravingz has decided to hire Team Analytica for developing
 this add-on feature for their website.
+
+
+### Google Doc Links:
+1. Finalized ER Schema and Diagram: https://drive.google.com/file/d/1PrFhhRdhP61D4BCFfw33K_vez5adlGKZ/view?usp=sharing
