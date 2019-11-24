@@ -7,3 +7,4 @@ DROP TABLE Shuttle;
 DROP TABLE dbo.Stop;
 DROP TABLE Category;
 DROP TABLE Customer;
+
