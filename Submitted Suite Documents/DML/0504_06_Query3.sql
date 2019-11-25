@@ -1,4 +1,4 @@
---3.What are three top most unpopular categories and their average price in each city?
+--3.What are three top most popular categories and their average price in each city?
 SELECT r.resCity, c.categoryName AS 'Lowest Category', AVG(r.resPrice) AS'average price'
 FROM Category c, Restaurant r, Belong b, (
 	SELECT TOP 3 c.categoryName, COUNT(b.resId) AS 'Number of Restaurants'
