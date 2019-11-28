@@ -11,4 +11,4 @@ Knowing the background of Team Analytica, including five database students study
 ### Google Doc Links:
 1. Finalized ER Schema and Diagram: https://drive.google.com/file/d/1PrFhhRdhP61D4BCFfw33K_vez5adlGKZ/view?usp=sharing
 
-### Team members: Aishwarya Bhangale, Cindy Chang, Jiakun Luo, Huyen Nguyen, Wenjing Cui.
+Team members: Aishwarya Bhangale, Cindy Chang, Jiakun Luo, Huyen Nguyen, Wenjing Cui.
