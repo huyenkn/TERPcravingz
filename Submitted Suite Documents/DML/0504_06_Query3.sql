@@ -1,12 +1,11 @@
 --3.What are three top most popular categories and their average price in each city?
-SELECT r.resCity, c.categoryName AS 'Lowest Category', AVG(r.resPrice) AS'average price'
-FROM Category c, Restaurant r, Belong b, (
-	SELECT TOP 3 c.categoryName, COUNT(b.resId) AS 'Number of Restaurants'
-	FROM Category c, Belong b
-	WHERE c.categoryId = b.categoryId
-	GROUP BY c.categoryName
-	ORDER BY COUNT(b.resId)) t
-WHERE b.resId = r.resId
-AND c.categoryId = b.categoryId
-AND c.categoryName = t.categoryName
-GROUP BY r.resCity, c.categoryName
+SELECT ccity, cName AS 'Highest Category', AVG(rePrice) AS'average price'
+FROM (SELECT c.categoryName as cName,r.resPrice as rePrice, r.resCity as ccity, count(r.resId) as nmbre,
+ROW_NUMBER() OVER( PARTITION BY r.resCity ORDER BY r.resCity,count(r.resId)) as rnmb
+FROM  Restaurant r,Category c,belong b
+WHERE b.resId=r.resId
+AND c.categoryId=b.categoryId
+GROUP BY  c.categoryName,r.resCity,r.resPrice) n
+WHERE n.rnmb<4
+GROUP BY ccity, cName
+ORDER BY ccity
