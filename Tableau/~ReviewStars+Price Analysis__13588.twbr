@@ -1,0 +1,1262 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20192.19.0917.1648                               -->
+<workbook source-build='2019.2.4 (20192.19.0917.1648)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Restaurant+ (BUDT758_DB_0504_06)' inline='true' name='federated.1o1zvfd17aspog12leszt1m5qdzc' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mssqllab.rhsmith.umd.edu,9758' name='sqlserver.0kp9eqr0mbwosw1616lph1nn3cmm'>
+            <connection authentication='sqlserver' class='sqlserver' dbname='BUDT758_DB_0504_06' odbc-native-protocol='yes' one-time-sql='' server='mssqllab.rhsmith.umd.edu,9758' username='BUDT758_Student_186' />
+          </named-connection>
+        </named-connections>
+        <relation join='full' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Have].[stopId]' />
+              <expression op='[Stop].[stopId]' />
+            </expression>
+          </clause>
+          <relation join='full' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[Have].[busId]' />
+                <expression op='[Shuttle].[busId]' />
+              </expression>
+            </clause>
+            <relation join='full' type='join'>
+              <clause type='join'>
+                <expression op='='>
+                  <expression op='[Belong].[categoryId]' />
+                  <expression op='[Category].[categoryId]' />
+                </expression>
+              </clause>
+              <relation join='full' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[Restaurant].[stopId]' />
+                    <expression op='[Have].[stopId]' />
+                  </expression>
+                </clause>
+                <relation join='full' type='join'>
+                  <clause type='join'>
+                    <expression op='='>
+                      <expression op='[Restaurant].[resId]' />
+                      <expression op='[Belong].[resId]' />
+                    </expression>
+                  </clause>
+                  <relation connection='sqlserver.0kp9eqr0mbwosw1616lph1nn3cmm' name='Restaurant' table='[dbo].[Restaurant]' type='table' />
+                  <relation connection='sqlserver.0kp9eqr0mbwosw1616lph1nn3cmm' name='Belong' table='[dbo].[Belong]' type='table' />
+                </relation>
+                <relation connection='sqlserver.0kp9eqr0mbwosw1616lph1nn3cmm' name='Have' table='[dbo].[Have]' type='table' />
+              </relation>
+              <relation connection='sqlserver.0kp9eqr0mbwosw1616lph1nn3cmm' name='Category' table='[dbo].[Category]' type='table' />
+            </relation>
+            <relation connection='sqlserver.0kp9eqr0mbwosw1616lph1nn3cmm' name='Shuttle' table='[dbo].[Shuttle]' type='table' />
+          </relation>
+          <relation connection='sqlserver.0kp9eqr0mbwosw1616lph1nn3cmm' name='Stop' table='[dbo].[Stop]' type='table' />
+        </relation>
+        <cols>
+          <map key='[busFinalDest]' value='[Shuttle].[busFinalDest]' />
+          <map key='[busId (Shuttle)]' value='[Shuttle].[busId]' />
+          <map key='[busId]' value='[Have].[busId]' />
+          <map key='[busName]' value='[Shuttle].[busName]' />
+          <map key='[busNo]' value='[Shuttle].[busNo]' />
+          <map key='[categoryId (Category)]' value='[Category].[categoryId]' />
+          <map key='[categoryId]' value='[Belong].[categoryId]' />
+          <map key='[categoryName]' value='[Category].[categoryName]' />
+          <map key='[friEndTime]' value='[Restaurant].[friEndTime]' />
+          <map key='[friStartTime]' value='[Restaurant].[friStartTime]' />
+          <map key='[monEndTime]' value='[Restaurant].[monEndTime]' />
+          <map key='[monStartTime]' value='[Restaurant].[monStartTime]' />
+          <map key='[resCity]' value='[Restaurant].[resCity]' />
+          <map key='[resId (Belong)]' value='[Belong].[resId]' />
+          <map key='[resId]' value='[Restaurant].[resId]' />
+          <map key='[resLat]' value='[Restaurant].[resLat]' />
+          <map key='[resLong]' value='[Restaurant].[resLong]' />
+          <map key='[resName]' value='[Restaurant].[resName]' />
+          <map key='[resPhoneNo]' value='[Restaurant].[resPhoneNo]' />
+          <map key='[resPostalCode]' value='[Restaurant].[resPostalCode]' />
+          <map key='[resPrice]' value='[Restaurant].[resPrice]' />
+          <map key='[resRevCNT]' value='[Restaurant].[resRevCNT]' />
+          <map key='[resStars]' value='[Restaurant].[resStars]' />
+          <map key='[resState]' value='[Restaurant].[resState]' />
+          <map key='[resStreet]' value='[Restaurant].[resStreet]' />
+          <map key='[resTransactionType]' value='[Restaurant].[resTransactionType]' />
+          <map key='[satEndTime]' value='[Restaurant].[satEndTime]' />
+          <map key='[satStartTime]' value='[Restaurant].[satStartTime]' />
+          <map key='[stopId (Have)]' value='[Have].[stopId]' />
+          <map key='[stopId (Stop)]' value='[Stop].[stopId]' />
+          <map key='[stopId]' value='[Restaurant].[stopId]' />
+          <map key='[stopLat]' value='[Stop].[stopLat]' />
+          <map key='[stopLong]' value='[Stop].[stopLong]' />
+          <map key='[stopName]' value='[Stop].[stopName]' />
+          <map key='[sunEndTime]' value='[Restaurant].[sunEndTime]' />
+          <map key='[sunStartTime]' value='[Restaurant].[sunStartTime]' />
+          <map key='[thuEndTime]' value='[Restaurant].[thuEndTime]' />
+          <map key='[thuStartTime]' value='[Restaurant].[thuStartTime]' />
+          <map key='[tuesEndTime]' value='[Restaurant].[tuesEndTime]' />
+          <map key='[tuesStartTime]' value='[Restaurant].[tuesStartTime]' />
+          <map key='[walktimeToRes]' value='[Restaurant].[walktimeToRes]' />
+          <map key='[wedEndTime]' value='[Restaurant].[wedEndTime]' />
+          <map key='[wedStartTime]' value='[Restaurant].[wedStartTime]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>resId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[resId]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resId</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>22</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[resName]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resName</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>70</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resStreet</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[resStreet]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resStreet</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>70</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resCity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[resCity]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resCity</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>25</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resState</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[resState]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resState</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resPostalCode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[resPostalCode]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resPostalCode</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resPhoneNo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[resPhoneNo]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resPhoneNo</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resLat</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[resLat]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resLat</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <scale>13</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resLong</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[resLong]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resLong</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <scale>13</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resStars</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[resStars]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resStars</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>3</precision>
+            <scale>1</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_NUMERIC&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resRevCNT</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[resRevCNT]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resRevCNT</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resPrice</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[resPrice]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resPrice</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resTransactionType</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[resTransactionType]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>resTransactionType</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>22</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>monStartTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[monStartTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>monStartTime</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>monEndTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[monEndTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>monEndTime</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tuesStartTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[tuesStartTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>tuesStartTime</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tuesEndTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[tuesEndTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>tuesEndTime</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wedStartTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[wedStartTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>wedStartTime</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wedEndTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[wedEndTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>wedEndTime</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>thuStartTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[thuStartTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>thuStartTime</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>thuEndTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[thuEndTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>thuEndTime</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>friStartTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[friStartTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>friStartTime</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>friEndTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[friEndTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>friEndTime</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>satStartTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[satStartTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>satStartTime</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>satEndTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[satEndTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>satEndTime</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sunStartTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[sunStartTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>sunStartTime</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sunEndTime</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[sunEndTime]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>sunEndTime</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIME&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIME&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stopId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[stopId]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>stopId</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>walktimeToRes</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[walktimeToRes]</local-name>
+            <parent-name>[Restaurant]</parent-name>
+            <remote-alias>walktimeToRes</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <scale>2</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[resId (Belong)]</local-name>
+            <parent-name>[Belong]</parent-name>
+            <remote-alias>resId</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>22</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>categoryId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[categoryId]</local-name>
+            <parent-name>[Belong]</parent-name>
+            <remote-alias>categoryId</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>busId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[busId]</local-name>
+            <parent-name>[Have]</parent-name>
+            <remote-alias>busId</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stopId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[stopId (Have)]</local-name>
+            <parent-name>[Have]</parent-name>
+            <remote-alias>stopId</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>categoryId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[categoryId (Category)]</local-name>
+            <parent-name>[Category]</parent-name>
+            <remote-alias>categoryId</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>4</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>categoryName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[categoryName]</local-name>
+            <parent-name>[Category]</parent-name>
+            <remote-alias>categoryName</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>busId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[busId (Shuttle)]</local-name>
+            <parent-name>[Shuttle]</parent-name>
+            <remote-alias>busId</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>6</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>busNo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[busNo]</local-name>
+            <parent-name>[Shuttle]</parent-name>
+            <remote-alias>busNo</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>3</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>busName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[busName]</local-name>
+            <parent-name>[Shuttle]</parent-name>
+            <remote-alias>busName</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>busFinalDest</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[busFinalDest]</local-name>
+            <parent-name>[Shuttle]</parent-name>
+            <remote-alias>busFinalDest</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stopId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[stopId (Stop)]</local-name>
+            <parent-name>[Stop]</parent-name>
+            <remote-alias>stopId</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>5</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_CHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stopName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[stopName]</local-name>
+            <parent-name>[Stop]</parent-name>
+            <remote-alias>stopName</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>100</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stopLat</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[stopLat]</local-name>
+            <parent-name>[Stop]</parent-name>
+            <remote-alias>stopLat</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>16</precision>
+            <scale>13</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stopLong</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[stopLong]</local-name>
+            <parent-name>[Stop]</parent-name>
+            <remote-alias>stopLong</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>16</precision>
+            <scale>13</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Bus Final Dest' datatype='string' name='[busFinalDest]' role='dimension' type='nominal' />
+      <column caption='Bus Id' datatype='string' name='[busId]' role='dimension' type='nominal' />
+      <column caption='Bus Name' datatype='string' name='[busName]' role='dimension' type='nominal' />
+      <column caption='Bus No' datatype='string' name='[busNo]' role='dimension' type='nominal' />
+      <column caption='Category Id' datatype='string' name='[categoryId]' role='dimension' type='nominal' />
+      <column caption='Category Name' datatype='string' name='[categoryName]' role='dimension' type='nominal' />
+      <column aggregation='Hour' caption='Fri End Time' datatype='datetime' name='[friEndTime]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Fri Start Time' datatype='datetime' name='[friStartTime]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Mon End Time' datatype='datetime' name='[monEndTime]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Mon Start Time' datatype='datetime' name='[monStartTime]' role='dimension' type='ordinal' />
+      <column caption='Res City' datatype='string' name='[resCity]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Res Id' datatype='string' name='[resId]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Res Lat' datatype='real' name='[resLat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Res Long' datatype='real' name='[resLong]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Res Name' datatype='string' name='[resName]' role='dimension' type='nominal' />
+      <column caption='Res Phone No' datatype='string' name='[resPhoneNo]' role='dimension' type='nominal' />
+      <column caption='Res Postal Code' datatype='string' name='[resPostalCode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <column caption='Res Price' datatype='integer' name='[resPrice]' role='measure' type='quantitative' />
+      <column caption='Res Rev CNT' datatype='integer' name='[resRevCNT]' role='measure' type='quantitative' />
+      <column caption='Res Stars' datatype='real' name='[resStars]' role='measure' type='quantitative' />
+      <column caption='Res State' datatype='string' name='[resState]' role='dimension' type='nominal' />
+      <column caption='Res Street' datatype='string' name='[resStreet]' role='dimension' type='nominal' />
+      <column caption='Res Transaction Type' datatype='string' name='[resTransactionType]' role='dimension' type='nominal' />
+      <column aggregation='Hour' caption='Sat End Time' datatype='datetime' name='[satEndTime]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Sat Start Time' datatype='datetime' name='[satStartTime]' role='dimension' type='ordinal' />
+      <column caption='Stop Id' datatype='string' name='[stopId]' role='dimension' type='nominal' />
+      <column caption='Stop Lat' datatype='real' name='[stopLat]' role='measure' type='quantitative' />
+      <column caption='Stop Long' datatype='real' name='[stopLong]' role='measure' type='quantitative' />
+      <column caption='Stop Name' datatype='string' name='[stopName]' role='dimension' type='nominal' />
+      <column aggregation='Hour' caption='Sun End Time' datatype='datetime' name='[sunEndTime]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Sun Start Time' datatype='datetime' name='[sunStartTime]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Thu End Time' datatype='datetime' name='[thuEndTime]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Thu Start Time' datatype='datetime' name='[thuStartTime]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Tues End Time' datatype='datetime' name='[tuesEndTime]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Tues Start Time' datatype='datetime' name='[tuesStartTime]' role='dimension' type='ordinal' />
+      <column caption='Walktime To Res' datatype='real' name='[walktimeToRes]' role='measure' type='quantitative' />
+      <column aggregation='Hour' caption='Wed End Time' datatype='datetime' name='[wedEndTime]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Wed Start Time' datatype='datetime' name='[wedStartTime]' role='dimension' type='ordinal' />
+      <column-instance column='[resPrice]' derivation='Attribute' name='[attr:resPrice:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[resStars]' derivation='Attribute' name='[attr:resStars:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[resPrice]' derivation='Avg' name='[avg:resPrice:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[resStars]' derivation='Avg' name='[avg:resStars:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[resStars]' derivation='Count' name='[cnt:resStars:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[resPrice]' derivation='None' name='[none:resPrice:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[resStars]' derivation='None' name='[none:resStars:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[resStars]' derivation='Count' name='[pcto:cnt:resStars:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[resPrice]' derivation='Sum' name='[sum:resPrice:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[resStars]' derivation='Sum' name='[sum:resStars:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.334351' measure-ordering='alphabetic' measure-percentage='0.665649' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1o1zvfd17aspog12leszt1m5qdzc].[attr:resPrice:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resPrice:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:resPrice:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1o1zvfd17aspog12leszt1m5qdzc].[sum:resPrice:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1o1zvfd17aspog12leszt1m5qdzc].[attr:resStars:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resStars:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1o1zvfd17aspog12leszt1m5qdzc].[cnt:resStars:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:resStars:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1o1zvfd17aspog12leszt1m5qdzc].[pcto:cnt:resStars:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1o1zvfd17aspog12leszt1m5qdzc].[sum:resStars:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Most of the restaurants around UMD are reasonably priced and have high ratings. There are very less restaurants that are expensive and have high ratings at the same time.</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Restaurant+ (BUDT758_DB_0504_06)' name='federated.1o1zvfd17aspog12leszt1m5qdzc' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1o1zvfd17aspog12leszt1m5qdzc'>
+            <column-instance column='[resLat]' derivation='Avg' name='[avg:resLat:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[resLong]' derivation='Avg' name='[avg:resLong:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[resLong]' derivation='None' name='[none:resLong:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' caption='Res Lat' datatype='real' name='[resLat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='Res Long' datatype='real' name='[resLong]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Res Price' datatype='integer' name='[resPrice]' role='measure' type='quantitative' />
+            <column caption='Res Stars' datatype='real' name='[resStars]' role='measure' type='quantitative' />
+            <column-instance column='[resPrice]' derivation='Sum' name='[sum:resPrice:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[resStars]' derivation='Sum' name='[sum:resStars:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:resLong:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:resLong:qk]</column>
+          </slices>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resLong:qk]' field-type='quantitative' max='-8571386.1849157196' min='-8579014.9537004754' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resLat:qk]' field-type='quantitative' max='4709791.6714413697' min='4705872.3040465517' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[sum:resPrice:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[sum:resPrice:qk]' num-steps='4' palette='tableau-map-temperatur' type='interpolated' />
+            <encoding attr='size' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[sum:resStars:qk]' field-type='quantitative' max='5.0' max-size='1' min='1.0' min-size='0' type='quantsize' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.1o1zvfd17aspog12leszt1m5qdzc].[sum:resPrice:qk]' />
+              <size column='[federated.1o1zvfd17aspog12leszt1m5qdzc].[sum:resStars:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.77005636692047119' />
+                <format attr='shape' value=':filled/circle' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resLat:qk]</rows>
+        <cols>[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resLong:qk]</cols>
+      </table>
+      <simple-id uuid='{BA3AB2B9-B634-4464-9B87-4657979578AE}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>City Wise Average Res Stars and Average Price - We can suggest which cities have reasonable pricing and high ratings and which have expensive pricing and high ratings</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Restaurant+ (BUDT758_DB_0504_06)' name='federated.1o1zvfd17aspog12leszt1m5qdzc' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1o1zvfd17aspog12leszt1m5qdzc'>
+            <column-instance column='[resPrice]' derivation='Avg' name='[avg:resPrice:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[resStars]' derivation='Avg' name='[avg:resStars:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[resCity]' derivation='None' name='[none:resCity:nk]' pivot='key' type='nominal' />
+            <column caption='Res City' datatype='string' name='[resCity]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column caption='Res Price' datatype='integer' name='[resPrice]' role='measure' type='quantitative' />
+            <column caption='Res Stars' datatype='real' name='[resStars]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1o1zvfd17aspog12leszt1m5qdzc].[Latitude (generated)]' included-values='non-null' />
+          <filter class='quantitative' column='[federated.1o1zvfd17aspog12leszt1m5qdzc].[Longitude (generated)]' included-values='non-null' />
+          <slices>
+            <column>[federated.1o1zvfd17aspog12leszt1m5qdzc].[Latitude (generated)]</column>
+            <column>[federated.1o1zvfd17aspog12leszt1m5qdzc].[Longitude (generated)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[Longitude (generated)]' field-type='quantitative' max='-8498923.1235303972' min='-8650913.8602437731' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[Latitude (generated)]' field-type='quantitative' max='4747809.5960290665' min='4669722.6131099965' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resPrice:qk]' field-type='quantitative' max='4.0' max-size='1' min='1.0' min-size='0' type='rangesize' />
+            <encoding attr='color' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resStars:qk]' max='5.0' min='0.0' palette='tableau-map-temperatur' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:resCity:nk]' value='false' />
+            <format attr='break-on-special' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:resCity:nk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:resCity:nk]' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resStars:qk]' />
+              <size column='[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resPrice:qk]' />
+              <text column='[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:resCity:nk]' />
+              <lod column='[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:resCity:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.1078591346740723' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1o1zvfd17aspog12leszt1m5qdzc].[Latitude (generated)]</rows>
+        <cols>[federated.1o1zvfd17aspog12leszt1m5qdzc].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{13B52E3A-1992-4AC9-872C-7CB82476B490}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Restaurant+ (BUDT758_DB_0504_06)' name='federated.1o1zvfd17aspog12leszt1m5qdzc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1zvfd17aspog12leszt1m5qdzc'>
+            <column-instance column='[resStars]' derivation='Avg' name='[avg:resStars:qk]' pivot='key' type='quantitative' />
+            <column caption='Category Name' datatype='string' name='[categoryName]' role='dimension' type='nominal' />
+            <column-instance column='[resId]' derivation='CountD' name='[ctd:resId:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[categoryName]' derivation='None' name='[none:categoryName:nk]' pivot='key' type='nominal' />
+            <column caption='Res Id' datatype='string' name='[resId]' role='dimension' type='nominal' />
+            <column caption='Res Stars' datatype='real' name='[resStars]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1o1zvfd17aspog12leszt1m5qdzc].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1o1zvfd17aspog12leszt1m5qdzc].[ctd:resId:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resStars:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:categoryName:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:categoryName:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:categoryName:nk]' member='%null%' />
+                <groupfilter function='member' level='[none:categoryName:nk]' member='&quot;Landmarks &amp; Historical Buildings&quot;' />
+                <groupfilter function='member' level='[none:categoryName:nk]' member='&quot;Parks&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:categoryName:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resStars:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:categoryName:nk]</column>
+            <column>[federated.1o1zvfd17aspog12leszt1m5qdzc].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[:Measure Names]' value='203' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resStars:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resStars:qk]' palette='tableau-map-temperatur' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1o1zvfd17aspog12leszt1m5qdzc].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1o1zvfd17aspog12leszt1m5qdzc].[none:categoryName:nk]</rows>
+        <cols>[federated.1o1zvfd17aspog12leszt1m5qdzc].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{390787B2-37F7-47ED-B36F-B40B8C892F1E}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='44'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1o1zvfd17aspog12leszt1m5qdzc].[sum:resPrice:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.1o1zvfd17aspog12leszt1m5qdzc].[sum:resStars:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{41216774-C6CF-42B2-A03A-E210D2303E8E}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resPrice:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.1o1zvfd17aspog12leszt1m5qdzc].[avg:resStars:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{07F5E406-B44C-490C-9F69-4FADB1FAA1CA}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{3C0B7E47-2654-49E2-8145-718E0E31D5E4}' />
+    </window>
+  </windows>
+</workbook>

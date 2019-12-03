@@ -300,8 +300,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.1kdjde40jeiokl13z7ycg0jiogfm].[avg:resLong:qk]' field-type='quantitative' max='-8540795.1124054659' min='-8598340.0500463378' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.1kdjde40jeiokl13z7ycg0jiogfm].[avg:resLat:qk]' field-type='quantitative' max='4731548.0175276026' min='4697548.9907927308' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1kdjde40jeiokl13z7ycg0jiogfm].[avg:resLong:qk]' field-type='quantitative' max='-8523642.3579487726' min='-8602579.1747175585' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1kdjde40jeiokl13z7ycg0jiogfm].[avg:resLat:qk]' field-type='quantitative' max='4736768.4209593339' min='4690130.5227581654' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='map'>
             <format attr='washout' value='0.0' />
