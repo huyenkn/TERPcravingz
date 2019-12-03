@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20192.19.0917.1648                               -->
+<workbook source-build='2019.2.4 (20192.19.0917.1648)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <MapboxVectorStylesAndLayers />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (finalanalysis)' inline='true' name='federated.1kdjde40jeiokl13z7ycg0jiogfm' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='finalanalysis1' name='excel-direct.1fstf4j1b5pb141227f250w70mgy'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Aishwarya/Documents/GitHub/TERPcravingz/Text Analysis/finalanalysis1.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1fstf4j1b5pb141227f250w70mgy' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:L2797:no:A1:L2797:0' header='yes' outcome='6'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='resId' ordinal='1' />
+            <column datatype='string' name='resName' ordinal='2' />
+            <column datatype='string' name='resCity' ordinal='3' />
+            <column datatype='string' name='resState' ordinal='4' />
+            <column datatype='real' name='resStars' ordinal='5' />
+            <column datatype='integer' name='resRevCNT' ordinal='6' />
+            <column datatype='integer' name='resPrice' ordinal='7' />
+            <column datatype='string' name='resTransactionType' ordinal='8' />
+            <column datatype='string' name='vote' ordinal='9' />
+            <column datatype='real' name='resLat' ordinal='10' />
+            <column datatype='real' name='resLong' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resId</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[resId]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>resId</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resName</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[resName]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>resName</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resCity</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[resCity]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>resCity</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resState</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[resState]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>resState</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resStars</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[resStars]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>resStars</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resRevCNT</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[resRevCNT]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>resRevCNT</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resPrice</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[resPrice]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>resPrice</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resTransactionType</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[resTransactionType]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>resTransactionType</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vote</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[vote]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>vote</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resLat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[resLat]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>resLat</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resLong</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[resLong]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>resLong</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:L2797:no:A1:L2797:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Res City' datatype='string' name='[resCity]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Res Id' datatype='string' name='[resId]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='real' name='[resLat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[resLong]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Res Name' datatype='string' name='[resName]' role='dimension' type='nominal' />
+      <column caption='Res Price' datatype='integer' name='[resPrice]' role='measure' type='quantitative' />
+      <column caption='Res Rev CNT' datatype='integer' name='[resRevCNT]' role='measure' type='quantitative' />
+      <column caption='Res Stars' datatype='real' name='[resStars]' role='measure' type='quantitative' />
+      <column caption='Res State' datatype='string' name='[resState]' role='dimension' type='nominal' />
+      <column caption='Res Transaction Type' datatype='string' name='[resTransactionType]' role='dimension' type='nominal' />
+      <column caption='Vote' datatype='string' name='[vote]' role='dimension' type='nominal' />
+      <column-instance column='[vote]' derivation='None' name='[none:vote:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.429008' measure-ordering='alphabetic' measure-percentage='0.570992' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:vote:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>&quot;Positive&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Neutral&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Negative&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Classification of Restaurants by Review Analysis</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (finalanalysis)' name='federated.1kdjde40jeiokl13z7ycg0jiogfm' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1kdjde40jeiokl13z7ycg0jiogfm'>
+            <column-instance column='[resLat]' derivation='Avg' name='[avg:resLat:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[resLong]' derivation='Avg' name='[avg:resLong:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[resCity]' derivation='None' name='[none:resCity:nk]' pivot='key' type='nominal' />
+            <column-instance column='[vote]' derivation='None' name='[none:vote:nk]' pivot='key' type='nominal' />
+            <column caption='Res City' datatype='string' name='[resCity]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column aggregation='Avg' datatype='real' name='[resLat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[resLong]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Vote' datatype='string' name='[vote]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1kdjde40jeiokl13z7ycg0jiogfm].[avg:resLong:qk]' field-type='quantitative' max='-8540795.1124054659' min='-8598340.0500463378' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1kdjde40jeiokl13z7ycg0jiogfm].[avg:resLat:qk]' field-type='quantitative' max='4731548.0175276026' min='4697548.9907927308' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1kdjde40jeiokl13z7ycg0jiogfm].[none:vote:nk]' />
+              <lod column='[federated.1kdjde40jeiokl13z7ycg0jiogfm].[none:resCity:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1kdjde40jeiokl13z7ycg0jiogfm].[avg:resLat:qk]</rows>
+        <cols>[federated.1kdjde40jeiokl13z7ycg0jiogfm].[avg:resLong:qk]</cols>
+      </table>
+      <simple-id uuid='{7AF223AC-3CD8-4B2E-943F-8599734360A9}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='44'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1kdjde40jeiokl13z7ycg0jiogfm].[none:vote:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{4CF71561-854F-4702-9E10-ABA559D9B52F}' />
+    </window>
+  </windows>
+</workbook>
