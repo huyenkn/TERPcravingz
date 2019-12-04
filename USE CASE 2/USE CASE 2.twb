@@ -6183,7 +6183,6 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card param='[federated.0h19rrs0pq9o3y14yait21oftynt].[avg:resPrice:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
             <card mode='radiolist' param='[federated.0h19rrs0pq9o3y14yait21oftynt].[none:resCity:nk]' type='filter' values='relevant' />
             <card param='[federated.0h19rrs0pq9o3y14yait21oftynt].[avg:resRevCNT:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
             <card pane-specification-id='5' param='[federated.0h19rrs0pq9o3y14yait21oftynt].[avg:resRevCNT:qk]' type='color' />
